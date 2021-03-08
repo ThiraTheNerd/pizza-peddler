@@ -55,12 +55,12 @@ div{
   border: 1px solid black;
   color: black;
 }
-#submit-btn{
+#proceed-btn{
   margin-top: 20px;
   margin-left: 15px;
   background-color: rgb(190, 110, 18);
 }
-#submit-btn:hover{
+#proceed-btn:hover{
   transform: scale(1.5);
   /* padding-left: 10px; */
 }
