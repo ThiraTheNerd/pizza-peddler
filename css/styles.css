@@ -72,5 +72,12 @@ div{
 #cart{
   background-color: white;
   margin: 70px;
-  
+  border-radius: 20px;
+}
+#cart-heading{
+  background-color: rgb(190, 110, 18);
+  padding: 20px;
+}
+#total-cost{
+  float: right;
 }
