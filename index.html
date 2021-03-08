@@ -105,7 +105,7 @@
         <div class="col-md-5" id="col-form">
           <form>
             <label for="select">What's your desirable flavour</label>
-            <select class="browser-default custom-select custom-select-md mb-3 name">
+            <select class="browser-default custom-select custom-select-md mb-3 name" id="type">
               <option value="chicken-periperi">Chicken PeriPeri</option>
               <option value="meat-deluxe">Meat Deluxe Pizza</option>
               <option value="vegan-master">Vegan-master Pizza</option>
@@ -116,7 +116,7 @@
               <option value="meat-deluxe">Chichen slice Pizza</option>
             </select>
             <label for="select">What's your prefered size</label>
-            <select class="browser-default custom-select custom-select-md mb-3 name">
+            <select class="browser-default custom-select custom-select-md mb-3" id="size">
               <option selected value="0">Select size</option>
               <option value="large">Large -- Ksh 1200</option>
               <option value="medium">Medium -- Ksh 900</option>
@@ -133,8 +133,8 @@
             <div class="row">
               <div class="col-sm-6">
                 <div class="custom-control custom-checkbox custom-control-inline">
-                  <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
-                  <label class="custom-control-label" for="Sausage">Extra Cheese - <span id="toppings-price">  150</span></label>
+                  <input type="checkbox" class="custom-control-input" id="extra-cheese" value="extra-cheese" name="toppings">
+                  <label class="custom-control-label" for="extra-cheese">Extra Cheese - <span id="toppings-price">  150</span></label>
                 </div>
                 <div class="custom-control custom-checkbox custom-control-inline">
                   <input type="checkbox" class="custom-control-input" id="tuna-salad" value="tuna-salad" name="toppings">
@@ -156,7 +156,7 @@
                     <span id="toppings-price">150</span></label>
                 </div>
                 <div class="custom-control custom-checkbox custom-control-inline">
-                  <input type="checkbox" class="custom-control-input" id="mushrooms" value="mushrooms" name="mushrooms">
+                  <input type="checkbox" class="custom-control-input" id="mushrooms" value="mushrooms" name="toppings">
                   <label class="custom-control-label" for="mushrooms">Mushrooms  - <span id="toppings-price">  150</span></label>
                 </div>
               </div>
