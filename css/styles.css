@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+div{
+  overflow: hidden;
+}
 .header{
   background-image: url(../assets/pexels-moacir-eduardo-de-oliveira-1069450.jpg);
   height: 200px;
@@ -26,5 +29,4 @@ div::after{
   content: "";
   display: table;
   clear: both;
-
 }
