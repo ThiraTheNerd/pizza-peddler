@@ -35,7 +35,7 @@ $(document).ready(function(){
       console.log(price);
       default: console.log("error")
     }
-    switch(pizzaCrust){
+    switch(crustType){
       case "0": crustPrice = 0;
       break;
       case "crispy": crustPrice = 100;
@@ -46,7 +46,7 @@ $(document).ready(function(){
       break;
       case "gluten-free": crustPrice = 300;
       console.log(crustPrice);
-      default: console.log("error")
+      default: console.log("No Price")
     }
   });
 });
