@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
 div{
   overflow: hidden;
-  border: 2px solid black;
   box-sizing: border-box;
 }
 .header{
-  background-image: url(../assets/pexels-moacir-eduardo-de-oliveira-1069450.jpg);
+  background-image: url(../assets/extra-cheese.jpg);
   height: 200px;
   text-align: center;
   padding-top: 50px;
@@ -27,35 +26,28 @@ div{
   color: black;
 }
 /* clear float after the menu */
-div::after{
+/* div::after{
   content: "";
   display: table;
   clear: both;
-}
-img #slider-img{
-  width: 100%;
-}
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-/* Hide the images by default */
-/* .mySlides {
-  display: none;
 } */
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: 22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.section-heading h2{
+  color: black;
+  padding: 40px;
+  padding-bottom: 20px;
+  font-family: 'Hachi Maru Pop', cursive;
+  font-weight: bolder;
+}
+.col-md-4{
+  border-radius: 10%;
+  padding: 10px;
+}
+.card-title{
+  
+}
+
+.order-here{
+  background-image: url(../assets/pizza-menu.jpg);
+  height: 200px;
+  width: 1000px; 
 }
