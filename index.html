@@ -93,11 +93,13 @@
     </div>
 
   </div>
+  <hr>
   
   <div class="container">
     <div class="section-heading">
       <h2>Order Here</h2>
     </div>
+    <hr>
     <div class="order-here">
       <div class="row">
         <div class="col-md-5">
@@ -128,12 +130,45 @@
               <option>Gluten-free</option>
             </select>
             <label for="toppings"> Select the toppings you would like</label>
-            
-            <input type="checkbox">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
+                  <label class="custom-control-label" for="Sausage">Extra Cheese - <span id="toppings-price">  150</span></label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="tuna-salad" value="tuna-salad" name="toppings">
+                  <label class="custom-control-label" for="tuna-salad">Tuna Salad - <span id="toppings-price">  150</span></label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="mild-cheese" value="mild-cheese" name="toppings">
+                  <label class="custom-control-label" for="mild-cheese">Mild Cheese - <span id="toppings-price">150</span></label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="extra-sause" value="extra-sause" name="toppings">
+                  <label class="custom-control-label" for="extra-sause">Extra Sause - <span id="toppings-price">  150</span></label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="spicy-toppings" value="spicy-toppings" name="toppings">
+                  <label class="custom-control-label" for="spicy-toppings">Spicy toppings -
+                    <span id="toppings-price">150</span></label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="mushrooms" value="mushrooms" name="mushrooms">
+                  <label class="custom-control-label" for="mushrooms">Mushrooms  - <span id="toppings-price">  150</span></label>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit-btn">Proceed</button>
 
+            </form>
           </form>
         </div>
-        <div class="col-md-7"></div>
+        <div class="col-md-7">
+
+        </div>
 
       </div>
     </div>
