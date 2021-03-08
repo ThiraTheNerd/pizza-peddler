@@ -38,6 +38,9 @@ div{
   font-family: 'Hachi Maru Pop', cursive;
   font-weight: bolder;
 }
+.order-here{
+  background-image: url(../assets/pizza-form-bg.jpeg);
+}
 .col-md-4{
   border-radius: 10%;
   padding: 10px;
@@ -48,9 +51,26 @@ div{
 }
 #toppings-price{
   padding: 5px;
-  background-color: rgb(23, 175, 6);
+  background-color: rgb(190, 110, 18);
   border: 1px solid black;
+  color: black;
 }
 #submit-btn{
   margin-top: 20px;
+  margin-left: 15px;
+  background-color: rgb(190, 110, 18);
+}
+#submit-btn:hover{
+  transform: scale(1.5);
+  /* padding-left: 10px; */
+}
+#col-form{
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.692);
+  color: rgb(148, 146, 146);
+}
+#cart{
+  background-color: white;
+  margin: 70px;
+  
 }

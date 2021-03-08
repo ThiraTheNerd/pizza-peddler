@@ -95,14 +95,14 @@
   </div>
   <hr>
   
-  <div class="container">
+  <div class="flex-box">
     <div class="section-heading">
       <h2>Order Here</h2>
     </div>
     <hr>
     <div class="order-here">
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-5" id="col-form">
           <form>
             <label for="select">What's your desirable flavour</label>
             <select class="browser-default custom-select custom-select-md mb-3 name">
@@ -161,12 +161,36 @@
                 </div>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary" id="submit-btn">Proceed</button>
+            <button type="submit" class="btn btn" id="submit-btn">Proceed</button>
 
             </form>
           </form>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-5" id="cart">
+          <div class="card">
+            <div class="card-body">
+              <h5>My Cart <span id="total cost">250</span></h5>
+              <table class="table">
+                <thread>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Crust</th>
+                    <th scope="col">Topping</th>
+                    <th scope="col">Price</th>
+                  </tr>
+                </thread>
+                <tbody>
+                  
+                </tbody>
+
+              </table>
+
+
+            </div>
+
+          </div>
 
         </div>
 
