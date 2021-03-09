@@ -16,9 +16,9 @@
     <h1 id="heading">Pizza Peddler</h1>
   </div>
   <div class="menu">
-    <a href="#">Menu</a>
-    <a href="#">Order</a>
-    <a href="#">Contact Us</a>
+    <a href="#multi-item-carousel">Menu</a>
+    <a href="#order-here">Order</a>
+    <a href="#contact">Contact Us</a>
   </div>
   <div class="section-heading">
     <h2>Our Varieties</h2>
@@ -100,7 +100,7 @@
       <h2>Order Here</h2>
     </div>
     <hr>
-    <div class="order-here">
+    <div class="order-here" id="order-here">
       <div class="row">
         <div class="col-md-5" id="col-form">
           <form>
@@ -168,7 +168,7 @@
           </form>
         </div>
         <div class="col-md-5" id="cart">
-          <div class="card">
+          <div class="card" id="cart-table">
             <div class="card-body">
               <h5 id="cart-heading">My Cart <span id="total-cost"> Ksh </span></h5>
               <table class="table">
@@ -195,13 +195,14 @@
               </table>
               <p id="pizzatotal"></p>
               <p id="addedprice">Delivery will cost sh. 250</p>
-              <p id="totalbill"></p>
-              <p id="finallmessage"></p>
+              <!-- <p id="totalbill"></p>
+              <p id="finallmessage"></p> -->
             </div>          
           </div>
           <button class="btn btn-success" id = "addPizza">Add Pizza</button>
           <button class="btn btn-primary" id="checkout">Checkout</button>
           <button class="btn btn-warning" id = "deliver">Home delivery?</button>
+          <button class="btn btn-default" id="pick-up">Pick Up</button>
           <p id="addedprice">Delivery will cost sh. 250</p>
           <div class="delivery">
             <form action="">
@@ -212,6 +213,16 @@
                 <button class="btn btn-success" id="final-order">Place Order</button>
               </div>
             </form>
+        </div>
+        <div class="card" id="receipt">
+          <div class="card-body">
+            <h4 id="customer-invoice">Here is your Receipt</h4>
+            <h5 id="location">Delivery Address: <span class="delivery-address"></span></h5>
+            <h5 id="full-cart">Total Order: <span class="total-order"></span></h5>
+            <h5 >Delivery Cost : <span id="total-delivery">250</span> </h5>
+            <h2 id="total-price">Total : <span id="total-cost"></span></h2>
+            <p id="final-message"></p>
+          </div>
         </div>
         </div>
       </div>

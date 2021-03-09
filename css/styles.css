@@ -76,8 +76,12 @@ div{
 }
 #cart{
   background-color: white;
-  margin: 70px;
+  margin: 45px;
   border-radius: 20px;
+
+}
+.table{
+  width: auto;
 }
 #cart-heading{
   background-color: rgb(190, 110, 18);
@@ -98,12 +102,27 @@ div{
 .delivery{
   display: none;
 }
-/* #addPizza{
-  display: none;
-} */
-/* #checkout{
-  display: none;
-} */
 #deliver{
   display: none;
+}
+#pick-up{
+  display: none;
+}
+#receipt{
+  display: none;
+}
+#total-price{
+  display: block;
+  background-color: rgb(74, 236, 74);
+  color: black;
+}
+#customer-invoice{
+  display: block;
+  background-color: rgb(173, 109, 35);
+  color: black;
+}
+.card-body span{
+  float: right;
+  color: black;
+  overflow: hidden;
 }

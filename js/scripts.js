@@ -56,9 +56,8 @@ $(document).ready(function(){
         console.log("Nothing has been selected");
         $("button#proceed-btn").show();
         $("#form-error").show();
-        $("button#addPizza").show();
-        $()
         $("#cart").hide();
+        $("#delivery").hide();
         
       }
       else{
@@ -84,17 +83,16 @@ $(document).ready(function(){
     // Add pizza button
     $("button#addPizza").click(function(){
         // event.preventDefault();
-        console.log("Pizza button is clicked");
         let pizzaName = $("#type option:selected").val();
-        let pizzasize = $("#size option:selected").val();
-        let crusttype = $("#crust option:selected").val();
+        let pizzaSize = $("#size option:selected").val();
+        let crustType = $("#crust option:selected").val();
         let selectedTopping = [];
         $.each($("input[name='toppings']:checked"), function(){            
           selectedTopping.push($(this).val());
         });
         console.log(selectedTopping.join(", "));
-        console.log(crusttype);
-        switch(pizzasize){
+        console.log(crustType);
+        switch(pizzaSize){
           case "0":
             price =0;
           break;
@@ -112,7 +110,7 @@ $(document).ready(function(){
           default:
             console.log("error"); 
         }
-        switch(crusttype){
+        switch(crustType){
             case "0": crustPrice = 0;
             console.log(crustPrice);
             break;
@@ -132,14 +130,14 @@ $(document).ready(function(){
 
           total = price + crustPrice + toppingPrice;
           console.log(total)
-
-          let checkoutTotal = 0;
+  
           checkoutTotal = checkoutTotal + total;
+          console.log(checkoutTotal);
 
           // constractor function
-        var newOrder = new pizza(pizzaName, pizzaSize, crustType,selectedTopping,total);
+        var newOrder = new Pizza(pizzaName, pizzaSize, crustType,selectedTopping,total);
 
-        $("#cart-items").append('<tr><td id="pizza-name">'+newOrder.name +'</td><td id="pizza-size">' + newOrder.size + '</td><td id="pizza-crust">'+newOrder.crust + '</td><td id="pizza-topping">'+newOrder.topping+'</td><td id="pizza-price">'+newOrder.total+'</td></tr>');
+        $("#cart-items").append('<tr><td id="pizza-name">'+newOrder.type +'</td><td id="pizza-size">' + newOrder.size + '</td><td id="pizza-crust">'+newOrder.crust + '</td><td id="pizza-topping">'+newOrder.topping+'</td><td id="pizza-price">'+newOrder.total+'</td></tr>');
         console.log(newOrder);
     });
 
@@ -148,9 +146,10 @@ $(document).ready(function(){
       $("button#checkout").hide();
       $("button#addPizza").hide();
       $("button#deliver").slideDown(1000);
+      $("button#pick-up").slideDown(1000);
       $("#addedprice").slideDown(1000);
 
-      console.log("YOur total bill is Ksh" + checkoutTotal );
+      console.log("Your total bill is Ksh" + checkoutTotal );
       $("#pizzatotal").append("Your bill is Ksh " + checkoutTotal);
     });
 
@@ -158,10 +157,13 @@ $(document).ready(function(){
     $("button#deliver").click(function(){
       $(".table").hide();
       $("#cart-heading").hide();
-      $(".form-group").slideDown(1000);
+      // $(".form-group").slideDown(1000);
       $("#addedprice").hide();
-      $("bitton#deliver").hide();
+      $("button#deliver").hide();
       $("#pizzatotal").hide();
+      $("button#pick-up").hide();
+      $(".delivery").slideDown(1000);
+      
 
       let payment = checkoutTotal + 250 ; 
       console.log( "Your cash on delivery is Ksh . " + payment);
@@ -175,17 +177,25 @@ $(document).ready(function(){
       $("#pizza-total").hide();
       $(".delivery").hide();
       $("button#final-order").hide();
+      $("#receipt").slideDown(1000);
+
       let payment = checkoutTotal + 250;
       console.log("You are expected to have " + payment + "on delivery");
 
       let customer = $("input#name").val();
       let phone = $("input#phone").val();
       let location = $("input#location").val();
+      console.log(customer);
+      console.log(phone);
+      console.log(location);
 
       if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
-        $("finalmessage").append ("Hey " + customer + "We have received your order it will be delivered at "+ location + ". Please have Ksh" +payment + "on delivery");
-        $("#totalbill").hide();
-        $("finalmessage").slideDown(1200);
+        
+        $("span.delivery-address").append(+ location );
+        $("span.total-order").append(+ checkoutTotal );
+        
+        $("span.total-cost").append(+ payment);
+        
       }
 
       else{
