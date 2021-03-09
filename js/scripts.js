@@ -60,6 +60,7 @@ $(document).ready(function(){
     let checkoutTotal = 0;
     checkoutTotal = checkoutTotal + total;
 
+
     $("#pizza-name").html($(".name option:selected").val());
     $("#pizza-size").html($("#size option:selected").val());
     $("#pizza-crust").html($("#crust option:selected").val());
@@ -140,5 +141,44 @@ $(document).ready(function(){
     $("#pizzatotal").append("Your bill is Ksh " + checkoutTotal);
   });
 
+  //homedelivey button
+  $("button#deliver").click(function(){
+    $(".table").hide();
+    $("#cart-heading").hide();
+    $(".form-group").slideDown(1000);
+    $("#addedprice").hide();
+    $("bitton#deliver").hide();
+    $("#pizzatotal").hide();
 
+    let payment = checkoutTotal + 250 ; 
+    console.log( "Your cash on delivery is Ksh . " + payment);
+    $("totalbill").append("You are expected to pay Ksh " + payment + "on delivery")
+  });
+
+  //On clicking place order button
+  $("button#final-order").click(function(event){
+    event.preventDefault();
+
+    $("#pizza-total").hide();
+    $(".delivery").hide();
+    $("button#final-order").hide();
+    let payment = checkoutTotal + 250;
+    console.log("You are expected to have " + payment + "on delivery");
+
+    let customer = $("input#name").val();
+    let phone = $("input#phone").val();
+    let location = $("input#location").val();
+
+    if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
+      $("finalmessage").append ("Hey " + customer + "We have received your order it will be delivered at "+ location + ". Please have Ksh" +payment + "on delivery");
+      $("#totalbill").hide();
+      $("finalmessage").slideDown(1200);
+    }
+
+    else{
+      alert("Please fill in the required details");
+      $(".delivery").show();
+      $("button#final-order").show();
+    }
+  });
 });
