@@ -51,10 +51,16 @@ $(document).ready(function(){
     var toppingPrice = selectedTopping.length * 150;
     console.log(toppingPrice);
 
-    // if ((pizzaSize == "0" && crustType == "0")){
-    //   console.log("Nothing has been selected");
-    //   $("total-cost").show();
-    // }
+    if ((pizzaSize == "0" && crustType == "0")){
+      console.log("Nothing has been selected");
+      $("button#proceed-btn").show();
+      $("#form-error").show();
+      $("#cart").hide();
+    }
+    else{
+      $("button#proceed-btn").hide();
+      $("#cart").slideDown(1000);
+    }
     total = price + crustPrice + toppingPrice;
     console.log(total)
     let checkoutTotal = 0;

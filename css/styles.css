@@ -64,6 +64,11 @@ div{
   transform: scale(1.5);
   /* padding-left: 10px; */
 }
+#form-error{
+  display: none;
+  color: red;
+  font-weight: bolder;
+}
 #col-form{
   padding: 40px;
   background-color: rgba(0, 0, 0, 0.692);
@@ -81,9 +86,24 @@ div{
 #total-cost{
   float: right;
 }
+#cart{
+  display: none;
+}
 #total-cost{
   display: none;
 }
 #addedprice{
+  display: none;
+}
+.delivery{
+  display: none;
+}
+#addPizza{
+  display: none;
+}
+#checkout{
+  display: none;
+}
+#deliver{
   display: none;
 }
