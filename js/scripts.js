@@ -7,7 +7,6 @@ function Pizza(type, size, crust, topping, total){
   this.topping = topping;
   this.total = total;
 }
-
 $(document).ready(function(){
   $("button#proceed-btn").click(function(event){
     event.preventDefault();
@@ -60,16 +59,18 @@ $(document).ready(function(){
 
     $("#pizza-name").html($(".name option:selected").val());
     $("#pizza-size").html($("#size option:selected").val());
+    $("#pizza-crust").html($("#crust option:selected").val());
+    $("#pizza-topping").html(selectedTopping.join(" , "));
     $("#pizza-price").html(total);
 
     // Add pizza button
     $("button#addPizza").click(function(){
-      let pizzaName = $(".name option:selected").val();
+      let pizzaName = $("#type option:selected").val();
       let pizzasize = $("#size option:selected").val();
       let crustType = $("#crust option:selected").val();
       let selectedTopping = [];
       $.each($("input[name='toppings']:checked"), function(){            
-          ptopping.push($(this).val());
+        selectedTopping.push($(this).val());
       });
       console.log(selectedTopping.join(", "));
       switch(pizzasize){
@@ -81,7 +82,7 @@ $(document).ready(function(){
            console.log(price);
          break;
          case "medium":
-           price = 850;
+           price = 900;
            console.log("The price is "+price);
          break;
          case "small":
@@ -115,7 +116,7 @@ $(document).ready(function(){
         // constractor function
       var newOrder = new pizza(pizzaName, pizzaSize, crustType,selectedTopping,total);
 
-      $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
+      $("#cart-items").append('<tr><td id="pizza-name">'+newOrder.name +'</td><td id="pizza-size">' + newOrder.size + '</td><td id="pizza-crust">'+newOrder.crust + '</td><td id="pizza-topping">'+newOrder.topping+'</td><td id="pizza-price">'+newOrder.total+'</td></tr>');
       console.log(newOrder);
   });
 })
