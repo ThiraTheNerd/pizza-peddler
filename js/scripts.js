@@ -22,6 +22,7 @@ $(document).ready(function(){
     });
     console.log(selectedTopping.join(" , "));
 
+
     switch(pizzaSize){
       case "0": price = 0;
       break;
@@ -55,6 +56,8 @@ $(document).ready(function(){
       console.log("Nothing has been selected");
       $("button#proceed-btn").show();
       $("#form-error").show();
+      $("button#addPizza").show();
+      $()
       $("#cart").hide();
     }
     else{

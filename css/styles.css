@@ -98,12 +98,12 @@ div{
 .delivery{
   display: none;
 }
-#addPizza{
+/* #addPizza{
   display: none;
-}
-#checkout{
+} */
+/* #checkout{
   display: none;
-}
+} */
 #deliver{
   display: none;
 }
