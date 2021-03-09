@@ -81,3 +81,6 @@ div{
 #total-cost{
   float: right;
 }
+#total-cost{
+  display: none;
+}

@@ -48,5 +48,19 @@ $(document).ready(function(){
       console.log(crustPrice);
       default: console.log("No Price")
     }
+    var toppingPrice = selectedTopping.length * 150;
+    console.log(toppingPrice);
+
+    // if ((pizzaSize == "0" && crustType == "0")){
+    //   console.log("Nothing has been selected");
+    //   $("total-cost").show();
+    // }
+    total = price + crustPrice + toppingPrice;
+    console.log(total)
+
+    $("#pizza-name").html($(".name option:selected").val());
+    $("#pizza-size").html($("#size option:selected").val());
+    $("#pizza-price").html(total);
+
   });
 });
