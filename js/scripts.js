@@ -71,8 +71,8 @@ $(document).ready(function(){
       $.each($("input[name='toppings']:checked"), function(){            
           ptopping.push($(this).val());
       });
-      console.log(ptopping.join(", "));
-      switch(psize){
+      console.log(selectedTopping.join(", "));
+      switch(pizzasize){
         case "0":
           price =0;
         break;
@@ -90,21 +90,33 @@ $(document).ready(function(){
          default:
            console.log("error"); 
        }
-       switch(pcrust){
+       switch(crustType){
           case "0":
-            crust_price = 0;
+            crustPrice = 0;
           break;
           case "Crispy":
-            crust_price = 200;
+            crustPrice = 100;
           break;
           case "Stuffed":
-            crust_price = 150;
+            crustPrice = 200;
           break;
           case "Gluten-free":
-            crust_price = 180;
+            crustPrice = 300;
           break;
           default:
             console.log("No price"); 
         }
+        var toppingPrice = selectedTopping.length * 150;
+        console.log(toppingPrice);
+
+        total = price + crustPrice + toppingPrice;
+        console.log(total)
+
+        // constractor function
+      var newOrder = new pizza(pizzaName, pizzaSize, crustType,selectedTopping,total);
+
+      $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
+      console.log(newOrder);
   });
+})
 });
