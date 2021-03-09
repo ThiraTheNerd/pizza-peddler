@@ -57,6 +57,8 @@ $(document).ready(function(){
     // }
     total = price + crustPrice + toppingPrice;
     console.log(total)
+    let checkoutTotal = 0;
+    checkoutTotal = checkoutTotal + total;
 
     $("#pizza-name").html($(".name option:selected").val());
     $("#pizza-size").html($("#size option:selected").val());
@@ -117,6 +119,9 @@ $(document).ready(function(){
         total = price + crustPrice + toppingPrice;
         console.log(total)
 
+        let checkoutTotal = 0;
+        checkoutTotal = checkoutTotal + total;
+
         // constractor function
       var newOrder = new pizza(pizzaName, pizzaSize, crustType,selectedTopping,total);
 
@@ -129,7 +134,10 @@ $(document).ready(function(){
     $("button#checkout").hide();
     $("button#addPizza").hide();
     $("button#deliver").slideDown(1000);
+    $("#addedprice").slideDown(1000);
 
+    console.log("YOur total bill is Ksh" + checkoutTotal );
+    $("#pizzatotal").append("Your bill is Ksh " + checkoutTotal);
   });
 
 
