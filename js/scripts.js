@@ -170,6 +170,13 @@ $(document).ready(function(){
       $("totalbill").append("You are expected to pay Ksh " + payment + "on delivery")
     });
 
+    //on clicking pick-up
+    $("button#pick-up").click(function(){
+      $("#cart").hide();
+      $("#final-display").slideDown(1000)
+      $("#final-msg").append("Thank you for ordering. Your pizza will be ready for pick-up in 15 minutes. Kindly have Ksh. " + checkoutTotal +" with you.")
+    })
+
     //On clicking place order button
     $("button#final-order").click(function(event){
       event.preventDefault();
