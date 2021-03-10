@@ -201,7 +201,7 @@ $(document).ready(function(){
         $("span.delivery-address").append(location );
         $("span.total-order").append(+ checkoutTotal );
         $("span.total-cost").append(payment);
-        $(".final-msg-deliv").append(" Hey , " + customer + " We have received your order and we will have it delivered at " + location + ". Prepare Ksh. " + payment + ". It was a pleasure serving you.")
+        $(".final-msg-deliv").append(" Hey , " + customer + ". We have received your order and we will have it delivered at " + location + ". Prepare Ksh. " + payment + ". It was a pleasure serving you.")
         
       }
 
